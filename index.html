@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - achu_k-Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Email js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Form validation -->
+  <script>
+    // Initialize EmailJS
+    emailjs.init("JcPYYGlKJDBHdNnvN"); // Replace with your EmailJS User ID
+  
+    // Form validation and EmailJS integration
+    function sendEmail(event) {
+        event.preventDefault();
+  
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+  
+        // Validation
+        if (name === '') {
+            alert('Please enter your name.');
+            return;
+        }
+  
+        if (email === '') {
+            alert('Please enter your email.');
+            return;
+        }
+  
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+  
+        if (subject === '') {
+            alert('Please enter the subject.');
+            return;
+        }
+  
+        if (message === '') {
+            alert('Please enter your message.');
+            return;
+        }
+  
+        // Send email using EmailJS
+        emailjs.send("service_4qcfkbi", "template_qjj7fut", {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        }).then(function(response) {
+            alert("Message sent successfully!");
+            document.getElementById('contactForm').reset(); // Reset form after success
+        }, function(error) {
+            alert("Failed to send message: " + error.text);
+        });
+    }
+  </script>
+  
+  
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="img50.webp" alt="" class="img-fluid ">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Achu k Mohanan</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/achu-k-mohanan-559085340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
+
+      <a href="https://www.snapchat.com/add/th_achu?share_id=XldvS7oKwY0&locale=en-US" class=""><i class="bi bi-snapchat"></i></a>
+      <a href="https://www.facebook.com/achu.kmohanan.9" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/achu_k._/profilecard/?igsh=OGJlbDM0YmxmbTZo" class="instagram"><i class="bi bi-instagram"></i></a>
+      <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul> 
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Interests</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Skills</a></li>
+
+         
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="IMG_20241129_191045.webp" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Achu k Mohanan</h2>
+        <p>I'm <span class="typed" data-typed-items="Developer,Photographer">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Hey,<br>
+          My name is Achu k Mohanan
+          i am from kottayam(aimanam) aimanam is a small village in the district of kottayam ,only 4 kilometers from kottayam town and  my village is mentioned
+          in a famous novelist Arundhati Roys's "THE GOD OF SMALL THINGS" and i am  complete my degree in Bsc Computer Science (2024);
+          just scroll down and know more about me :)
+
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="IMG_20241129_190800.webp" class="img20" alt="">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Web Developer</h2>
+            <p class="fst-italic py-3">
+              student at brototype 
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>06 february </span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li> -->
+                  <li><i class="bi bi-chevron-right"></i> <strong>Mobile:</strong> <span>8137980201</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kottayam,Kerala</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Under Graduate</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>achukmohanan06@gmail.com </span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li> -->
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              On 2019 completed 10th Graduation in M D Seminary Higher Secondry School and 12th HSE completed on 2021
+              and i joined College of Applied Science puthupally and complete the undergraduation in 2024.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+     </section> 
+
+     
+   <!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>WEB DEVELOPER</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Achu k Mohanan</h4>
+              <p><em>Student at Brotoype</em></p>
+              <ul>
+                <li>Kochi,Kerala </li>
+                <li>+91:8137980201</li>
+                <li>achukmohanan06@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>SSLC</h4>
+              <h5>2018 - 2019</h5>
+              <p><em>M D Seminary Higher Secondry School Kottayam</em></p>
+              <p>Secondry School Leaving Certificate<br>(State Syllabus)</p>
+            </div><!-- Edn Resume Item -->  
+
+            <div class="resume-item">
+              <h4>Higher Secondry Education</h4>
+              <h5>2019 - 2021</h5>
+              <p><em>CMS College Higher Secondry School Kottayam</em></p>
+              <p>Kerala Higher Secondary Education from CMSCHSS </p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title"></h3>
+            <div class="resume-item">
+              <h4>UnderGraduation</h4>
+              <h5>2021 - 2024</h5>
+              <p><em>CAS Puthupally</em></p>
+              <p>UnderGraduation(Degree) in BSC Computer Science in College of Applied Science,puthupally.</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>POST GRADUATION</h4>
+              <h5>2024</h5>
+              <p><em>Brotoype</em></p>
+              <p>
+                To enchance the skill in Web Development.
+              </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">PROJECTS</h3>
+              <div class="resume-item">
+                <h4>Image Color Enchancement</h4>
+                <p>during my College main project Image Color Enchancement(under water) using  HTML,CSS,Python and mySql </p>
+      
+            
+  
+                    <h4>art-gallery management system</h4>
+                    <p>during my College mini project Art Gallery Management System using HTML,CSS and Php </p>
+               
+                <!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>INTERESTS&<br>ACHIEVEMENTS </h2>
+        <p>showing some interests which i have</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+                      </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="Screenshot 2024-12-03 122804.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>CRICKET</h4>
+                  <p>During my College time my College was participating MG university Cricket competition i am been the captain of the team </p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="Screenshot 2024-03-29 133339.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>SHORT FILM</h4>
+                  <p>We are Created a Short film for the state level competition </p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="PSX_20240329_150927.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ACHIEVEMENTS</h4>
+                  <p>From Principal<br>For the participation for the Short film</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <img src="PSX_20240329_144829.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ACHIEVEMENTS</h4>
+                  <p>The Crew of 'THE DONOR'Short Film</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="Screenshot 2024-12-03 164038.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>KALOLSAVAM</h4>
+                  <p>2ND place in MIME in college Arts </p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <img src="1000101829.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ACHIEVEMENTS</h4>
+                  <p>From the College PTA </p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <img src="IMG-20240317-WA0009.webp" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ACHIEVEMENTS</h4>
+                  <p>For the participation of state level informative video competition conducted by Kerala Police </p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+           
+          </div>
+
+        </div>
+
+      </div>
+
+      
+  
+<!-- test -->
+  
+    <section id="services" class="services section">
+
+      
+      <div class="container section-title" data-aos="fade-up">
+        <section id="skills" class="skills section light-background">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Skills</h2>
+            <p>i am try to enchance my skills</p>
+          </div><!-- End Section Title -->
+    
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+            <div class="row skills-content skills-animation">
+    
+              <div class="col-lg-6">
+    
+                <div class="progress">
+                  <span class="skill"><span>HTML</span> <i class="val">75%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- End Skills Item -->
+    
+                <div class="progress">
+                  <span class="skill"><span>CSS</span> <i class="val">75%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- End Skills Item -->
+    
+                <div class="progress">
+                  <span class="skill"><span>JavaScript</span> <i class="val">5%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- End Skills Item -->
+    
+              </div>
+    
+              <div class="col-lg-6" >
+    
+                <div class="progress">
+                  <span class="skill"><span>Bootstrap</span> <i class="val">70%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- End Skills Item -->
+    
+                <div class="progress">
+                  <span class="skill"><span>Designing</span> <i class="val">90%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- End Skills Item -->
+    
+                <div class="progress">
+                  <span class="skill"><span>photoshop</span> <i class="val">55%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div><!-- End Skills Item -->
+    
+              </div>
+    
+            </div>
+    
+          </div>
+    
+        </section>
+        </div>
+
+    </section>
+ <!-- test -->
+    
+
+   
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Kalapallil(H)<br> olassa p.o <br>kottayam  <br> 686014 </p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>8137980201</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>achukmohanan06@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+              <!-- <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125745.78609835396!2d76.22589125516976!3d9.970864495135864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d08f976f3a9%3A0xe9cdb444f06ed454!2sErnakulam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1733234034582!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form novalidate id="contactForm" onsubmit="sendEmail(event)"   class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject" >
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message" ></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <!-- <div class="loading">Loading</div> -->
+                  <!-- <div class="error-message"></div> -->
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">achu k </strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+       
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
